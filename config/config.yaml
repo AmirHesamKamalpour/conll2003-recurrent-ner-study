@@ -1,0 +1,44 @@
+# Configuration for CoNLL-2003 NER sequence labeling with bidirectional encoders.
+
+seed: 42
+
+dataset:
+  name: "eriktks/conll2003"
+  # datasets>=4 no longer supports Python dataset loading scripts/trust_remote_code.
+  # The Parquet conversion revision avoids the old conll2003.py loading script.
+  revision: "convert/parquet"
+  token_column: "tokens"
+  label_column: "ner_tags"
+
+vocab:
+  cutoff: 1
+  special_tokens:
+    pad: "<pad>"
+    unk: "<unk>"
+    start: "<s>"
+    end: "</s>"
+
+model:
+  embedding_size: 64
+  hidden_size: 64
+  num_layers: 1
+  bidirectional: true
+
+training:
+  batch_size: 32
+  num_epochs: 10
+  learning_rate: 1.0e-3
+  weight_decay: 0.0
+  label_pad_id: -100
+  device: "auto"
+
+experiments:
+  - rnn
+  - lstm
+  - gru
+
+outputs:
+  root_dir: "outputs"
+  plot_dir: "outputs/plots"
+  report_dir: "outputs/reports"
+  saved_model_dir: "models/saved_models"
