@@ -269,7 +269,3 @@ These are natural extensions of the existing comparison, **not experiments claim
 3. Sepp Hochreiter and Jürgen Schmidhuber (1997). [*Long Short-Term Memory*](https://doi.org/10.1162/neco.1997.9.8.1735). *Neural Computation*.
 4. Kyunghyun Cho et al. (2014). [*Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation*](https://arxiv.org/abs/1406.1078). EMNLP 2014.
 5. [PyTorch: `pack_padded_sequence`](https://docs.pytorch.org/docs/stable/generated/torch.nn.utils.rnn.pack_padded_sequence.html) and [seqeval](https://github.com/chakki-works/seqeval) documentation.
-
----
-
-*The tables and figures above describe the saved results supplied with this repository; they have not been independently reproduced by rerunning training. No claim of state-of-the-art benchmark performance is made.*
